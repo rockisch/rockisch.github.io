@@ -1,0 +1,12 @@
+{
+    "short_name": "RockischTest",
+    "name": "Rockisch Github IO Test",
+    "icons": [
+      {
+        "src": "google-icon.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      }
+    ],
+    "start_url": "index.html?launcher=true"
+  }
