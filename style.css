@@ -1,20 +1,35 @@
 body {
-    background-color: lightblue;
+    background-color: #25242C;
+    color: white;
+    
 }
 
-h1 {
-    color: blue;
-    font-family: verdana;
-    font-size: 300%;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #141414;
 }
-p  {
-    font-family: courier;
-    font-size: 160%;
+
+li {
+    float: left;
 }
-p.error {
-    font-family: verdana;
-    font-size: 200%;
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: 90%
 }
-.lower {
-    font-size: 100%;
+
+li a:hover {
+    background-color: #111111;
+}
+
+#img-edit {
+    margin: 16px 16px;
 }
