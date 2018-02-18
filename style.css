@@ -3,6 +3,12 @@ body {
 }
 
 h1 {
-    color: navy;
-    margin-left: 20px;
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+}
+p  {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
 }
