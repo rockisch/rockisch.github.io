@@ -8,7 +8,13 @@ h1 {
     font-size: 300%;
 }
 p  {
-    color: red;
     font-family: courier;
     font-size: 160%;
+}
+p.error {
+    font-family: verdana;
+    font-size: 200%;
+}
+.lower {
+    font-size: 100%;
 }
