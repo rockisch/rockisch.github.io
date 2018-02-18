@@ -7,5 +7,6 @@
         "type": "image/png"
       }
     ],
+    "theme_color": "lightblue",
     "start_url": "index.html?launcher=true"
   }
