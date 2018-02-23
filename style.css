@@ -12,8 +12,9 @@ ul {
     background-color: #141414;
 }
 
-p {
+h1 {
     padding-left: 20px;
+    font-size: 30px
 }
 
 li {
