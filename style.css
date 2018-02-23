@@ -1,7 +1,7 @@
 body {
-    background-color: #25242C;
-    color: white;
-    
+    /*background-color: #25242C;*/
+    background-image: url('smiley.gif');
+    color: white
 }
 
 ul {
@@ -10,6 +10,10 @@ ul {
     padding: 0px;
     overflow: hidden;
     background-color: #141414;
+}
+
+p {
+    padding-left: 20px;
 }
 
 li {
