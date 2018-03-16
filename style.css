@@ -1,20 +1,32 @@
 body {
     /*background-color: #25242C;*/
     background-image: url('smiley.gif');
+    margin: 0;
+    padding: 12px 0;
+    padding-top: 12px;
+    padding-right: 0px;
+    padding-bottom: 12px;
+    padding-left: 0px;
     color: white
 }
 
-ul {
+/* Config related to the boxes */
+#navBar {
     list-style-type: none;
     margin: 0;
+    opacity: 1;
     padding: 0px;
     overflow: hidden;
     background-color: #141414;
 }
 
-h1 {
-    padding-left: 20px;
-    font-size: 30px
+ul {
+    list-style-type: none;
+    margin: 0;
+    opacity: 0.9;
+    padding: 0px 20px;
+    overflow: hidden;
+    background-color: #000000;
 }
 
 li {
@@ -31,6 +43,14 @@ li a {
     font-size: 90%
 }
 
-li a:hover {
-    background-color: #111111;
+/* Config related to the divs */
+#mainDiv {
+    padding: 0px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Config related to the texts */
+h1 {
+
 }
