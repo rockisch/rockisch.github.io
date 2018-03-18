@@ -26,6 +26,18 @@ slider.oninput = function() {
 	branchCaller(width / 2, heigth, len, angle, 0)
 }
 
+var slider2 = document.getElementById("len");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider2.oninput = function() {
+	output2.innerHTML = this.value / 4;
+	len = this.value;
+	ctx.clearRect(0, 0, width, heigth)
+	branchCaller(width / 2, heigth, len, angle, 0)
+}
+
 function branchCaller(xMoveTo, yMoveTo, len, angle, lineCounter) {
 	newLineCounter = lineCounter + 1;
 	ctx.lineWidth = lineMaxWidth - (newLineCounter * lineWidthPerLayer);
