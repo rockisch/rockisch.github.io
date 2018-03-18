@@ -1,6 +1,7 @@
 body {
     /*background-color: #25242C;*/
-    background-image: url('../src/smiley.gif');
+    background-image: url('../src/beebop.gif');
+    background-size: auto;
     margin: 0;
     padding: 12px 0;
     padding-top: 12px;
