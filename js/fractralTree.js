@@ -5,11 +5,11 @@ canvas.style.backgroundColor = "grey";
 
 var ctx = canvas.getContext("2d");
 
-var len = 130;
+var len = 150;
 var angle = Math.PI / 2;
 var angleChange = Math.PI / 6;
 var newLenMult = 0.75
-var lenLimit = 20;
+var lenLimit = 10;
 var lineMaxWidth = 30;
 var lineWidthPerLayer = 3;
 var lineCounter = 0;
