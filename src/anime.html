@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Anime</title>
+		
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="lightblue">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<link rel="stylesheet" 
+			  id="first_style" 
+			  type="text/css" 
+			  href="css/style.css" 
+			  media="all">
+		
+		<link rel="stylesheet"
+			  href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+
+		<link rel="manifest" 
+			  href="manifest.json">
+    </head>
+    <body>
+		<div id=mainDiv>
+        	<!--Top nav bar-->
+    		<ul id='navBar'>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="anime.html">Anime</a></li>
+				<li><a href="games.html">Games</a></li>
+			</ul>
+			<ul>
+				<h1 id=test>Something</h1>
+				<h1 id=test2>Something2</h1>
+				<canvas id="myCanvas" width="700" height="700";></canvas>
+				<script>
+					var test = document.getElementById("test");
+					var test2 = document.getElementById("test2");
+					var canvas = document.getElementById("myCanvas");
+					var width = canvas.offsetWidth;
+					var heigth = canvas.offsetHeight;
+					canvas.style.backgroundColor = "grey";
+					var ctx = canvas.getContext("2d");
+
+					var len = 150;
+					angle = Math.PI / 2;
+					angleChange = Math.PI / 6;
+					newLenMult = 0.75
+					lenLimit = 40;
+					lineMaxWidth = 20;
+					lineWidthPerLayer = 3;
+					lineCounter = 0;
+					
+					branch(width / 2, heigth, len, angle, lineMaxWidth)
+					function branch(xMoveTo, yMoveTo, len, angle, lineWidth) {
+						lineCounter++;
+						
+						ctx.moveTo(xMoveTo, yMoveTo);
+						xLineTo = xMoveTo + (Math.cos(angle) * len);
+						yLineTo = yMoveTo - (Math.sin(angle) * len);
+						ctx.lineTo(xLineTo, yLineTo);
+						ctx.lineWidth = localLineWidth;
+						ctx.stroke();
+						newLen = len * newLenMult;
+						newAngle = angle + angleChange;
+						if (len > lenLimit) {
+							branch(xLineTo, yLineTo, newLen, newAngle, localLineWidth)
+						}
+						ctx.stroke();
+						newLen = len * newLenMult;
+						newAngle = angle - angleChange;
+						xLineTo = xMoveTo + (Math.cos(angle) * len);
+						yLineTo = yMoveTo - (Math.sin(angle) * len);
+
+						ctx.moveTo(xMoveTo, yMoveTo);
+						ctx.lineTo(xLineTo, yLineTo);
+						localLineWidth = lineWidth - lineWidthPerLayer;
+
+						ctx.lineWidth = localLineWidth
+						if (len > lenLimit) {
+							branch(xLineTo, yLineTo, newLen, newAngle, localLineWidth)
+						}
+						lineCounter--;
+						ctx.stroke();
+					}
+				</script>
+			</ul>
+		</div>
+	</body>
+</html>

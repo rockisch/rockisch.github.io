@@ -10,7 +10,7 @@
 		<link rel="stylesheet" 
 			  id="first_style" 
 			  type="text/css" 
-			  href="style.css" 
+			  href="css/style.css" 
 			  media="all">
 		
 		<link rel="stylesheet"
@@ -21,7 +21,7 @@
     </head>
     <body>
 		<div id=mainDiv>
-        	<!--Top nav bar-->
+			<!--Top nav bar-->
     		<ul id='navBar'>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="anime.html">Anime</a></li>
@@ -31,46 +31,8 @@
 				<h1 id=test>Something</h1>
 				<h1 id=test2>Something2</h1>
 				<canvas id="myCanvas" width="700" height="700";></canvas>
-				<script>
-					var test = document.getElementById("test");
-					var test2 = document.getElementById("test2");
-					var canvas = document.getElementById("myCanvas");
-					var width = canvas.offsetWidth;
-					var heigth = canvas.offsetHeight;
-					canvas.style.backgroundColor = "grey";
-					var ctx = canvas.getContext("2d");
-
-					var len = 150;
-					angle = Math.PI / 2;
-					angleChange = Math.PI / 6;
-					newLenMult = 0.75
-					lenLimit = 10;
-					branch(width / 2, heigth, len, angle)
-
-					function branch(xMoveTo, yMoveTo, len, angle) {
-						ctx.moveTo(xMoveTo, yMoveTo);
-						xLineTo = xMoveTo + (Math.cos(angle) * len);
-						yLineTo = yMoveTo - (Math.sin(angle) * len);
-						ctx.lineTo(xLineTo, yLineTo);
-						newLen = len * newLenMult;
-						newAngle = angle + angleChange;
-						if (len > lenLimit) {
-							branch(xLineTo, yLineTo, newLen, newAngle)
-						}
-						newLen = len * newLenMult;
-						newAngle = angle - angleChange;
-						xLineTo = xMoveTo + (Math.cos(angle) * len);
-						yLineTo = yMoveTo - (Math.sin(angle) * len);
-
-						ctx.moveTo(xMoveTo, yMoveTo);
-						ctx.lineTo(xLineTo, yLineTo);
-						if (len > lenLimit) {
-							branch(xLineTo, yLineTo, newLen, newAngle)
-						}				
-
-						ctx.stroke();
-					}
-				</script>
+				<script src="js/fractralTree.js"></script>
+				
 			</ul>
 		</div>
 	</body>
