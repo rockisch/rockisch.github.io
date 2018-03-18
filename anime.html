@@ -40,9 +40,11 @@
 					canvas.style.backgroundColor = "grey";
 					var ctx = canvas.getContext("2d");
 
-					var len = 200;
+					var len = 150;
 					angle = Math.PI / 2;
 					angleChange = Math.PI / 6;
+					newLenMult = 0.75
+					lenLimit = 10;
 					branch(width / 2, heigth, len, angle)
 
 					function branch(xMoveTo, yMoveTo, len, angle) {
@@ -50,19 +52,19 @@
 						xLineTo = xMoveTo + (Math.cos(angle) * len);
 						yLineTo = yMoveTo - (Math.sin(angle) * len);
 						ctx.lineTo(xLineTo, yLineTo);
-						newLen = len * 0.6;
+						newLen = len * newLenMult;
 						newAngle = angle + angleChange;
-						if (len > 5) {
+						if (len > lenLimit) {
 							branch(xLineTo, yLineTo, newLen, newAngle)
 						}
-						newLen = len * 0.6;
+						newLen = len * newLenMult;
 						newAngle = angle - angleChange;
 						xLineTo = xMoveTo + (Math.cos(angle) * len);
 						yLineTo = yMoveTo - (Math.sin(angle) * len);
 
 						ctx.moveTo(xMoveTo, yMoveTo);
 						ctx.lineTo(xLineTo, yLineTo);
-						if (len > 5) {
+						if (len > lenLimit) {
 							branch(xLineTo, yLineTo, newLen, newAngle)
 						}				
 
