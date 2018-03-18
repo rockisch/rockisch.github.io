@@ -14,6 +14,18 @@ var lineMaxWidth = 30;
 var lineWidthPerLayer = 3;
 var lineCounter = 0;
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+	output.innerHTML = this.value / 4;
+	angleChange = Math.PI / (this.value / 4);
+	ctx.clearRect(0, 0, width, heigth)
+	branchCaller(width / 2, heigth, len, angle, 0)
+}
+
 function branchCaller(xMoveTo, yMoveTo, len, angle, lineCounter) {
 	newLineCounter = lineCounter + 1;
 	ctx.lineWidth = lineMaxWidth - (newLineCounter * lineWidthPerLayer);
@@ -25,7 +37,7 @@ function branchCaller(xMoveTo, yMoveTo, len, angle, lineCounter) {
 	
 	newLen = len * newLenMult;
 	newAngle = angle + angleChange;
-	console.log(`${newLineCounter}: Width: ${ctx.lineWidth}`);
+
 	if (len > lenLimit) {
 		branchCaller(xLineTo, yLineTo, newLen, newAngle, newLineCounter)
 	}
@@ -37,15 +49,13 @@ function branchCaller(xMoveTo, yMoveTo, len, angle, lineCounter) {
 	yLineTo = yMoveTo - (Math.sin(angle) * len);
 	ctx.lineTo(xLineTo, yLineTo);
 	ctx.stroke();
+
 	newLen = len * newLenMult;
 	newAngle = angle - angleChange;
-	
-	console.log(`${lineCounter}: Width: ${ctx.lineWidth}`);
+
 	if (len > lenLimit) {
 		branchCaller(xLineTo, yLineTo, newLen, newAngle, newLineCounter)
 	}
 }
-
-
 
 branchCaller(width / 2, heigth, len, angle, 0)
