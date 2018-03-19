@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Projects</title>
+		
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="lightblue">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<link rel="stylesheet" 
+			  id="first_style" 
+			  type="text/css" 
+			  href="../css/style.css" 
+			  media="all">
+		
+		<link rel="stylesheet"
+			  href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+
+		<link rel="manifest" 
+			  href="../manifest.json">
+    </head>
+    <body>
+		<div id=mainDiv>
+			<!--Top nav bar-->
+    		<ul id='navBar'>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../projects.html">Projects</a></li>
+				<li><a href="../test.html">Test</a></li>
+			</ul>
+			<ul>
+				<canvas id="myCanvas" width="1150" height="970";></canvas>
+				<div class="slidecontainer">
+					<input type="range" min="4" max="40" value="16" class="slider" id="myRange">
+				</div>
+				<p id="demo">.</p>
+				<div class="slidecontainer">
+					<input type="range" min="50" max="250" value="150" class="slider" id="len">
+				</div>
+				<p id="demo2">.</p>
+				<script src="../js/fractralTree.js"></script>
+				
+			</ul>
+		</div>
+	</body>
+</html>

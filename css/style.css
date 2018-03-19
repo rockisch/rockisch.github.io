@@ -1,0 +1,82 @@
+body {
+    /*background-color: #25242C;*/
+    background-image: url('../src/beebop.gif');
+    background-size: auto;
+    margin: 0;
+    padding: 12px 0;
+    padding-top: 12px;
+    padding-right: 0px;
+    padding-bottom: 12px;
+    padding-left: 0px;
+    color: white;
+    font-family: 'Roboto'
+}
+
+/* Config related to the boxes */
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    opacity: 1;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #141414;
+    margin-bottom: 60px
+}
+
+ul {
+    list-style-type: none;
+    margin: 30px 0px;
+    opacity: 0.95;
+    padding: 25px 20px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: 90%
+}
+
+/* Config related to the divs */
+#mainDiv {
+    padding: 0px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.projectLink {
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 15px;
+    border-color: white;
+}
+
+.pWithoutSpace {
+    margin: 0px;
+}
+
+#homeMain {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projectListItem {
+    padding: 0px 20px;
+}
