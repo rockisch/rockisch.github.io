@@ -34,3 +34,7 @@ li a {
 li a:hover {
     background-color: #111111;
 }
+
+#main {
+    max-width: 1000px;
+}
