@@ -20,12 +20,13 @@ body {
     padding: 0px;
     overflow: hidden;
     background-color: #141414;
+    margin-bottom: 60px
 }
 
 ul {
     list-style-type: none;
-    margin: 60px 0px;
-    opacity: 0.9;
+    margin: 30px 0px;
+    opacity: 0.95;
     padding: 25px 20px;
     overflow: hidden;
     background-color: #000000;
@@ -52,10 +53,6 @@ li a {
     margin: 0 auto;
 }
 
-/* Config related to the texts */
-h1 {
-
-}
 
 .projectLink {
     margin: 10px 0px;
@@ -68,4 +65,18 @@ h1 {
     border-width: medium;
     border-radius: 15px;
     border-color: white;
+}
+
+.pWithoutSpace {
+    margin: 0px;
+}
+
+#homeMain {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projectListItem {
+    padding: 0px 20px;
 }
