@@ -17,23 +17,25 @@
 			  href="https://fonts.googleapis.com/css?family=Open+Sans:700">
 
 		<link rel="manifest" 
-			  href="../manifest.json">
+                          href="../manifest.json">
+                          
+        <link rel="import" href="../navBarTempl.html">
     </head>
     <body>
 		<div id=mainDiv>
-            <!--Top nav bar-->
-    		<ul id='navBar'>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../test.html">Test</a></li>
-            </ul>
+            <script>
+                var link = document.querySelector('link[rel="import"]');
+                var template = link.import.querySelector('#navBarInChild');
+                var clone = document.importNode(template.content, true);
+                document.querySelector('#mainDiv').appendChild(clone);
+            </script>
             <ul>
                 <h1>Embed video</h1>
                 <video width="800" height="500" controls>
-                        <source src="../src/maiddragon.webm" type="video/webm">
+                <source src="../src/maiddragon.webm" type="video/webm">
                       Your browser does not support the video tag.
-                      </video>
-                </ul>
+                </video>
+            </ul>
         </div>
 	</body>
 </html>
