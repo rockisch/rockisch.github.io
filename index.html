@@ -13,24 +13,24 @@
 
 		<link rel="stylesheet" 
 			id="first_style" 
-			type="text/css" 
-			href="css/style.css" 
-			media="all">
+			type="text/css"
+			href="css/style.css">
 			  
 		<link rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Open+Sans:700">
 
-		<link rel="manifest" 
-			  href="manifest.json">
+		<link rel="manifest" href="manifest.json">
+
+		<link rel="import" href="navBarTempl.html">
 	</head>
 	<body>
 		<div id='mainDiv'>
-			<!--Top nav bar-->
-			<ul id='navBar'>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="test.html">Test</a></li>
-			</ul>
+			<script>
+				var link = document.querySelector('link[rel="import"]');
+				var template = link.import.querySelector('#navBarInMain');
+				var clone = document.importNode(template.content, true);
+				document.querySelector('#mainDiv').appendChild(clone);
+			</script>
 			<ul class="post">
 				<div id="homeMain">
 				<h1>Haas's testing site!</h1>

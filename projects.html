@@ -18,15 +18,18 @@
 
 		<link rel="manifest" 
 			  href="manifest.json">
+
+		<link rel="import" href="navBarTempl.html">
     </head>
     <body>
 		<div id=mainDiv>
 			<!--Top nav bar-->
-    		<ul id='navBar'>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="test.html">Test</a></li>
-			</ul>
+    		<script>
+				var link = document.querySelector('link[rel="import"]');
+				var template = link.import.querySelector('#navBarInMain');
+				var clone = document.importNode(template.content, true);
+				document.querySelector('#mainDiv').appendChild(clone);
+			</script>
 			<ul>
 				<h1>JavaScript projects</h1>
 				<br>
@@ -41,6 +44,12 @@
 					<img src="src/maidragon.png" alt="video player" style="width:533px;height:300">
 					<br>
 					<a href="projects/videoPlayer.html" class="projectLink">Link to project</a>
+				</li>
+				<li class="projectListItem">
+					<h2>Floppy Bird</h2>
+					<img src="src/flappy_bird.png" alt="flappy bird" style="width:300px;height:300">
+					<br>
+					<a href="projects/flappyBird.html" class="projectLink">Link to project</a>
 				</li>
 			</ul>
 		</div>

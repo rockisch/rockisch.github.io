@@ -17,19 +17,24 @@
 			  href="https://fonts.googleapis.com/css?family=Open+Sans:700">
 
 		<link rel="manifest" 
-			  href="manifest.json">
+              href="manifest.json">
+            
+        <link rel="import" href="navBarTempl.html">
     </head>
     <body>
         <div id=mainDiv>
             <!--Top nav bar-->
-            <ul id='navBar'>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="test.html">Test</a></li>
-            </ul>
+            <script>
+                var link = document.querySelector('link[rel="import"]');
+                var template = link.import.querySelector('#navBarInMain');
+                var clone = document.importNode(template.content, true);
+                document.querySelector('#mainDiv').appendChild(clone);
+            </script>
             <ul>
                 <h1>Test Page</h2>
-                <p id="testing">AAA</p>
+                <p id="demo"></p>
+                <canvas id="testCanvas" width="600" height="600"></canvas>
+                <script src="js/test.js"></script>
             </ul>
         </div>
     </body>

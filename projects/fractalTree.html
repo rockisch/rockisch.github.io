@@ -18,23 +18,24 @@
 
 		<link rel="manifest" 
 			  href="../manifest.json">
+		<link rel="import" href="../navBarTempl.html">
     </head>
     <body>
 		<div id=mainDiv>
-			<!--Top nav bar-->
-    		<ul id='navBar'>
-				<li><a href="../index.html">Home</a></li>
-				<li><a href="../projects.html">Projects</a></li>
-				<li><a href="../test.html">Test</a></li>
-			</ul>
-			<ul>
-				<canvas id="myCanvas" width="1150" height="970";></canvas>
+			<script>
+				var link = document.querySelector('link[rel="import"]');
+				var template = link.import.querySelector('#navBarInChild');
+				var clone = document.importNode(template.content, true);
+				document.querySelector('#mainDiv').appendChild(clone);
+			</script>
+			<ul id="projectUl">
+				<canvas id="myCanvas" width="1160" height="970";></canvas>
 				<div class="slidecontainer">
 					<input type="range" min="4" max="40" value="16" class="slider" id="angleChange">
 				</div>
 				<p id="angleChangeOutput">.</p>
 				<div class="slidecontainer">
-					<input type="range" min="50" max="250" value="150" class="slider" id="len">
+					<input type="range" min="50" max="235" value="150" class="slider" id="len">
 				</div>
 				<p id="lenOutput">.</p>
 				<script src="../js/fractralTree.js"></script>

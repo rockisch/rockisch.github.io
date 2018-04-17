@@ -14,7 +14,11 @@
 			  media="all">
 		
 		<link rel="stylesheet"
-			  href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+              href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+              
+        <link rel="stylesheet"
+              type="text/css"
+              href="../css/flappyBird.css">
 
 		<link rel="manifest" 
                           href="../manifest.json">
@@ -30,11 +34,14 @@
                 document.querySelector('#mainDiv').appendChild(clone);
             </script>
             <ul>
-                <h1>Embed video</h1>
-                <video width="800" height="500" controls>
-                <source src="../src/maiddragon.webm" type="video/webm">
-                      Your browser does not support the video tag.
-                </video>
+                <div class="container">
+                    <canvas id="gameCanvas" width="1160" height="700";></canvas>
+                    <div class="gameText" id="points">0</div>
+                    <p class="gameText" id="tryAgain"></p>
+                </div>
+                <script src="../js/flappyBird/Bird.js"></script>
+                <script src="../js/flappyBird/Wall.js"></script>
+                <script src="../js/flappyBird/flappyBird.js"></script>
             </ul>
         </div>
 	</body>

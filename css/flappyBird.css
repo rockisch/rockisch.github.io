@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Karma Future';
+    src: url("../fonts/karma.future.ttf");
+}
+
+.container {
+    position: relative;
+}
+
+.gameText {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: 'Karma Future';
+}
+
+#points {
+    color: black;
+    top: 10%;
+    font-size: 50pt;
+}
+
+#tryAgain {
+    left: 36%;
+    width: 28%;
+    top: 60%;
+    border-width: medium;
+    border-radius: 15px;
+    border-color: black;
+    font-size: 40pt;
+    padding-bottom: 20px;
+}
