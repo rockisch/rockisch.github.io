@@ -8,7 +8,7 @@ const points = document.getElementById("points");
 const tryAgain = document.getElementById("tryAgain");
 
 var gameOverImage = new Image();
-gameOverImage.src = '../../src/game_over.png';
+gameOverImage.src = '../../src/images/game_over.png';
 gameOverImage.onload = () => {
     ctx.drawImage(gameOverImage, 50, 50);
 }

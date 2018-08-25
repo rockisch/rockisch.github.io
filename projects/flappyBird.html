@@ -1,48 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<title>Projects</title>
-		
-		<meta charset="UTF-8">
-		<meta name="theme-color" content="lightblue">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-		<link rel="stylesheet" 
-			  id="first_style" 
-			  type="text/css" 
-			  href="../css/style.css" 
-			  media="all">
-		
-		<link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Open+Sans:700">
-              
-        <link rel="stylesheet"
-              type="text/css"
-              href="../css/flappyBird.css">
 
-		<link rel="manifest" 
-                          href="../manifest.json">
-                          
-        <link rel="import" href="../navBarTempl.html">
-    </head>
-    <body>
-		<div id=mainDiv>
-            <script>
-                var link = document.querySelector('link[rel="import"]');
-                var template = link.import.querySelector('#navBarInChild');
-                var clone = document.importNode(template.content, true);
-                document.querySelector('#mainDiv').appendChild(clone);
-            </script>
-            <ul>
-                <div class="container">
-                    <canvas id="gameCanvas" width="1160" height="700";></canvas>
-                    <div class="gameText" id="points">0</div>
-                    <button class="gameText" hidden id="tryAgain"></button>
-                </div>
-                <script src="../js/flappyBird/Bird.js"></script>
-                <script src="../js/flappyBird/Wall.js"></script>
-                <script src="../js/flappyBird/flappyBird.js"></script>
-            </ul>
-        </div>
-	</body>
+<head>
+    <title>Floppy Bird</title>
+
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="lightblue">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" id="main_style" type="text/css" href="../css/style.css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+    <link rel="stylesheet" type="text/css" href="../css/flappyBird.css">
+    <link rel="import" href="../navBarTempl/navBarTempl.html">
+</head>
+
+<body>
+    <div id=mainDiv>
+        <script src="../navBarTempl/navBarTemplChild.js"></script>
+        <ul>
+            <div class="container">
+                <canvas id="gameCanvas" width="1160" height="700" ;></canvas>
+                <div class="gameText" id="points">0</div>
+                <button class="gameText" hidden id="tryAgain"></button>
+            </div>
+            <script src="../js/flappyBird/Bird.js"></script>
+            <script src="../js/flappyBird/Wall.js"></script>
+            <script src="../js/flappyBird/flappyBird.js"></script>
+        </ul>
+    </div>
+</body>
+
 </html>

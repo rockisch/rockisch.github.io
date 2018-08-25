@@ -10,27 +10,21 @@
 		<meta name="author" content="Rockisch">
 		<meta http-equiv="refresh" content="120">
 
-		<link rel="stylesheet" id="first_style" type="text/css" href="css/style.css">
+		<link rel="stylesheet" id="main_style" type="text/css" href="css/style.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700">
-		<link rel="manifest" href="manifest.json">
-		<link rel="import" href="navBarTempl.html">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="import" href="navBarTempl/navBarTempl.html">
 	</head>
 	<body>
 		<div id='mainDiv'>
-			<script>
-				var link = document.querySelector('link[rel="import"]');
-				var template = link.import.querySelector('#navBarInMain');
-				var clone = document.importNode(template.content, true);
-				document.querySelector('#mainDiv').appendChild(clone);
-			</script>
-			<ul class="post">
-				<div id="homeMain">
-					<h1>Haas's testing site!</h1>
-					<br>
-					<img src="src/simon.png" style="height: 60%; width: 60%">
-					<p id="test">Pierce the heavens!</p>
-				</div>
-			</ul>
+			<script src="navBarTempl/navBarTemplMain.js"></script>
+			<div class="block">
+				<h1>Haas's testing site!</h1>
+				<br>
+				<img src="src/images/simon.png" style="height: 20%; width: 20%">
+				<p id="test">This entire site was built by hand, without using any frameworks.</p>
+				<p>Yes, I'm stupid :)</p>
+			</div>
 		</div>
 	</body>
 </html>

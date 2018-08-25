@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<title>Projects</title>
-		
-		<meta charset="UTF-8">
-		<meta name="theme-color" content="lightblue">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-		<link rel="stylesheet" 
-			  id="first_style" 
-			  type="text/css" 
-			  href="../css/style.css" 
-			  media="all">
-		
-		<link rel="stylesheet"
-			  href="https://fonts.googleapis.com/css?family=Open+Sans:700">
 
-		<link rel="manifest" 
-			  href="../manifest.json">
-		<link rel="import" href="../navBarTempl.html">
-    </head>
-    <body>
-		<div id=mainDiv>
-			<script>
-				var link = document.querySelector('link[rel="import"]');
-				var template = link.import.querySelector('#navBarInChild');
-				var clone = document.importNode(template.content, true);
-				document.querySelector('#mainDiv').appendChild(clone);
-			</script>
-			<ul id="projectUl">
-				<canvas id="myCanvas" width="1160" height="970";></canvas>
-				<div class="slidecontainer">
-					<input type="range" min="4" max="40" value="16" class="slider" id="angleChange">
-				</div>
-				<p id="angleChangeOutput">.</p>
-				<div class="slidecontainer">
-					<input type="range" min="50" max="235" value="150" class="slider" id="len">
-				</div>
-				<p id="lenOutput">.</p>
-				<script src="../js/fractralTree.js"></script>
-				
-			</ul>
-		</div>
-	</body>
+<head>
+	<title>Fractral Tree</title>
+
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="lightblue">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" id="main_style" type="text/css" href="../css/style.css" media="all">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+	<link rel="import" href="../navBarTempl/navBarTempl.html">
+</head>
+
+<body>
+	<div id=mainDiv>
+		<script src="../navBarTempl/navBarTemplChild.js"></script>
+		<ul id="projectUl">
+			<canvas id="myCanvas" width="1160" height="970" ;></canvas>
+			<div class="slidecontainer">
+				<input type="range" min="4" max="40" value="16" class="slider" id="angleChange">
+			</div>
+			<p id="angleChangeOutput">.</p>
+			<div class="slidecontainer">
+				<input type="range" min="50" max="235" value="150" class="slider" id="len">
+			</div>
+			<p id="lenOutput">.</p>
+			<script src="../js/fractralTree.js"></script>
+
+		</ul>
+	</div>
+</body>
+
 </html>
