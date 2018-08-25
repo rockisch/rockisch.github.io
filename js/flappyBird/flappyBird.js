@@ -33,6 +33,7 @@ tryAgain.addEventListener('click', function (event) {
     tryAgain.innerHTML = ''
     tryAgain.style.borderStyle = 'none'
     a = 1;
+    tryAgain.hidden = true;
     setTimeout(setup, 100)
 });
 
@@ -121,6 +122,7 @@ function draw() {
                 clearInterval(wallInterval);
                 gameOver = true;
                 player.flySpeed = 0;
+                tryAgain.hidden = false;
                 tryAgain.innerHTML = "Try Again";
                 tryAgain.style.borderStyle = "solid";
             }
