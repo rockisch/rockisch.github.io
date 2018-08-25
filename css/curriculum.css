@@ -1,8 +1,12 @@
+.curriculumBox {
+    width: 50%;
+    margin: 50px 0;
+    float:left;
+}
+
 .curriculumButton {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 30px;
-    max-width: 800px;
-    margin: 40px 20px;
     text-align: center;
     background-color: white
 }
@@ -14,4 +18,10 @@ a {
 
 a:visited {
     color: black;
+}
+
+@media only screen and (max-width: 700px) {
+    .curriculumBox {
+        width: 100%;
+    }
 }
