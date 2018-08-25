@@ -4,7 +4,7 @@ const canvas = document.getElementById("myCanvas");
 canvas.style.backgroundColor = "grey";
 const ctx = canvas.getContext("2d");
 
-const canvasUl = document.getElementById("projectUl")
+const canvasUl = document.getElementById("projectDiv")
 const canvasUlStyle = window.getComputedStyle(canvasUl, null);
 var canvasUlPadding = canvasUlStyle.getPropertyValue('padding-left');
 canvasUlPadding = canvasUlPadding.slice(0, -2);
@@ -82,7 +82,7 @@ const output = document.getElementById("angleChangeOutput");
 output.innerHTML = "Angle: 45.0";
 
 angleChangeSlider.oninput = function() {
-	angleChange = Math.PI / (this.value / 4);
+	angleChange = (Math.PI / (this.value / 4));
 	output.innerHTML = "Angle: " + (180 / (this.value / 4)).toFixed(1);
 	ctx.clearRect(0, 0, width, height);
 	startBranching(width / 2, height, len, angle, 0);
