@@ -25,3 +25,10 @@ a.projectLink {
 a.projectLink:visited {
     color: black;
 }
+
+@media only screen and (max-width: 500px) {
+    img {
+        width: 80% !important;
+        height: 80% !important;
+    }
+}
